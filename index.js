@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser')
 const todoRoutes = require('./routes/todo_route.js')
 const cors = require('cors');
-const path = __dirname +'/web/'
+const path = __dirname +'/build/'
 
 app.use(express.static(path));
 

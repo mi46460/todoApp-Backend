@@ -1,12 +1,18 @@
-var mysql = require('mysql')
-var connection = mysql.createConnection({
+var mysql = require('mysql2');
+// var connection = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: '', 
+//   database: 'todo_database',
+// })
+var connection =mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: '', 
   database: 'todo_database',
 })
 
-connection.connect((err) => {
+connection.getConnection((err) => {
   if (err) {
     console.log(err)
     return
